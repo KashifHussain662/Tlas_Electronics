@@ -39,3 +39,11 @@ function showSuccessMessage(message) {
 function showErrorMessage(message) {
   toastr.error(message);
 }
+
+// Script for Back-to-Top Button
+const backToTop = document.getElementById("backToTop");
+window.onscroll = () => {
+  backToTop.style.display = window.scrollY > 100 ? "block" : "none";
+};
+backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
