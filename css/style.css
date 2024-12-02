@@ -2,14 +2,14 @@
 :root {
   --primary-blue: #004AAD; /* Blue */
   --secondary-green: #2ECC71; /* Green */
-  --white: #FFFFFF; /* White */
+  /* --white: #FFFFFF; White */
   --light-gray: #f7f7f7; /* Light Gray */
 }
 
 body {
   font-family: 'Roboto', sans-serif; /* Body Text Font */
   color: var(--primary-blue); /* Default Text Color */
-  background-color: var(--white); /* Default Background Color */
+  background-color:#f4f8fb; /* Default Background Color */
   margin: 0;
   padding: 0;
 }
@@ -141,13 +141,13 @@ header .nav-link:hover {
 .overview {
   background-color: var(--white);
   color: var(--primary-blue);
-  padding: 5rem 0;
 }
 
 .overview h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   font-weight: 700;
+  margin-top: 50px;
 }
 
 .overview p {
@@ -166,6 +166,7 @@ header .nav-link:hover {
 .icon i:hover {
   transform: scale(1.1); /* Slightly enlarge icon on hover */
 }
+
 
 /* Footer */
 footer {
@@ -231,4 +232,22 @@ section {
   .icon i {
     font-size: 2.5rem; /* Smaller icons on mobile */
   }
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--secondary-green);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+#backToTop:hover {
+  background-color: #0056b3;
 }
