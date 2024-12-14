@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TLAS ELECTRIC PTY LTD</title>
     <link
+      rel="shortcut icon"
+      href="./images/logo/Asset 1.png"
+      type="image/x-icon"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
@@ -33,11 +38,6 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <style>
-      .about img:hover {
-        transform: scale(1.05);
-      }
-    </style>
   </head>
 
   <body>
@@ -47,10 +47,18 @@
     </div>
 
     <!-- Header -->
-    <header class="p-3">
+    <header class="">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand text-white" href="#">TLAS ELECTRIC PTY LTD</a>
+          <!-- Logo as an image -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="./images/logo/Asset 1.png"
+              alt="TLAS ELECTRIC PTY LTD"
+              style="max-height: 50px"
+            />
+            <span class="text-white m-4">TLAS ELECTRIC PTY LTD</span>
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -63,25 +71,23 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a href="#" class="nav-link">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="./About/index.html" class="nav-link">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a href="./Services/index.html" class="nav-link">Services</a>
-              </li>
-              <li class="nav-item">
-                <a href="./Products/index.html" class="nav-link">Products</a>
-              </li>
-              <li class="nav-item">
-                <a href="./Contact_Us/index.html" class="nav-link"
-                  >Contact Us</a
-                >
-              </li>
-            </ul> -->
+             <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./About/index.html" class="nav-link">About Us</a>
+          </li>
+         <!-- <li class="nav-item">
+            <a href="./Services/index.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="./Products/index.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="./Contact_Us/index.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul> -->
           </div>
         </nav>
       </div>
@@ -188,229 +194,176 @@
       </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="about" data-aos="fade-up">
-      <div class="container">
-        <h3
-          class="mb-4"
-          style="
-            font-size: 2.5rem;
-            color: #333;
-            font-weight: 600;
-            padding: 16px;
-            text-align: center;
-          "
-        >
-          About Us
-        </h3>
-        <div class="row align-items-center">
-          <!-- Left Side (Text Content) -->
-          <div class="col-lg-6 text-lg-left">
-            <p style="font-size: 1.125rem; line-height: 1.8; color: #555">
-              At <strong style="color: #0275d8">TLAS ELECTRIC PTY LTD</strong>,
-              we are passionate about bridging the gap between the Australian
-              electronics market and the growing demand in Tanzania. By
-              sourcing, refurbishing, and exporting quality electronics, we aim
-              to contribute to the economic growth and technological advancement
-              in Tanzania. <br /><br />
-              Our expert team is dedicated to ensuring the highest standards in
-              product quality, while our innovative approach helps us stay ahead
-              of the market trends. With a vision of enhancing local industries
-              in Tanzania through access to the latest electronic solutions, we
-              are building strong, sustainable partnerships for a prosperous
-              future.
-            </p>
-          </div>
+    <section class="container-flude" style="background-color: var(--white)">
+      <div class="row p-4">
+        <!-- Text Column -->
+        <div class="col-lg-6 py-5">
+          <h2 class="display-4 text-dark mb-4 text-center">Sourcing</h2>
+          <p class="lead text-muted mt-4 text-center">
+            We expertly source high-quality used electronics from trusted
+            Australian suppliers, ensuring every shipment is tailored to meet
+            the needs of East Africa’s thriving market. Bringing the best of
+            Australia, shipped to East Africa with ease!.
+          </p>
+        </div>
 
-          <!-- Right Side (Image) -->
-          <div class="col-lg-6">
+        <!-- Image Column -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="product-img">
             <img
-              src="./images/HeroSection.webp"
-              alt="About Us Image"
+              src="./images/product1.webp"
+              alt="Product Image"
               class="img-fluid rounded shadow-lg"
-              style="
-                max-height: 400px;
-                object-fit: cover;
-                border-radius: 12px;
-                transition: transform 0.3s ease;
-              "
             />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Quick Overview -->
-    <section class="overview" data-aos="fade-up">
-      <div class="container">
-        <h3 class="mb-5 fw-bold text-center">
-          End-to-End Connected Electronics Experience
-        </h3>
-        <div class="row justify-content-between">
-          <div class="col-md-2 text-center">
-            <div class="icon mb-4">
-              <i class="bi bi-plug display-4 text-primary"></i>
+    <!-- changeBackground -->
+    <section class="section rounded" id="section">
+      <div class="text-center">
+        <div class="row g-0">
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="grid-item"
+              onclick="changeBackground('https://images.pexels.com/photos/3761266/pexels-photo-3761266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', this)"
+            >
+              A
+              <p class="description">Innovations in healthcare technology.</p>
             </div>
-            <h5 class="fw-bold text-dark">Connect</h5>
-            <p class="small text-muted">
-              Seamlessly connect with a network of trusted electronics brands
-              and suppliers.
-            </p>
           </div>
-          <div class="col-md-2 text-center">
-            <div class="icon mb-4">
-              <i class="bi bi-tv display-4 text-success"></i>
+
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="grid-item"
+              onclick="changeBackground('https://images.pexels.com/photos/3761160/pexels-photo-3761160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', this)"
+            >
+              B
+              <p class="description">The Internet of Things revolution.</p>
             </div>
-            <h5 class="fw-bold text-dark">Showcase</h5>
-            <p class="small text-muted">
-              Display a wide range of electronics to attract the right
-              customers.
-            </p>
           </div>
-          <div class="col-md-2 text-center">
-            <div class="icon mb-4">
-              <i class="bi bi-basket display-4 text-warning"></i>
+
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="grid-item"
+              onclick="changeBackground('https://images.pexels.com/photos/3761118/pexels-photo-3761118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', this)"
+            >
+              C
+              <p class="description">Transforming the retail experience.</p>
             </div>
-            <h5 class="fw-bold text-dark">Explore</h5>
-            <p class="small text-muted">
-              Discover a variety of electronics to make informed choices.
-            </p>
           </div>
-          <div class="col-md-2 text-center">
-            <div class="icon mb-4">
-              <i class="bi bi-truck display-4 text-danger"></i>
+
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="grid-item"
+              onclick="changeBackground('https://images.pexels.com/photos/3183143/pexels-photo-3183143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', this)"
+            >
+              D
+              <p class="description">Financial technology advancements.</p>
             </div>
-            <h5 class="fw-bold text-dark">Deliver</h5>
-            <p class="small text-muted">
-              Ensure quick and reliable delivery of electronics to your
-              customers.
-            </p>
           </div>
-          <div class="col-md-2 text-center">
-            <div class="icon mb-4">
-              <i class="bi bi-bar-chart display-4 text-info"></i>
+
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="grid-item"
+              onclick="changeBackground('https://images.pexels.com/photos/6667692/pexels-photo-6667692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', this)"
+            >
+              E
+              <p class="description">
+                Artificial Intelligence and Machine Learning.
+              </p>
             </div>
-            <h5 class="fw-bold text-dark">Optimize</h5>
-            <p class="small text-muted">
-              Continuously improve the shopping experience with data-driven
-              insights.
-            </p>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="grid-item"
+              onclick="changeBackground('https://images.pexels.com/photos/5699208/pexels-photo-5699208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', this)"
+            >
+              F
+              <p class="description">
+                Revolutionizing data storage and transactions.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="grid-item"
+              onclick="changeBackground('https://images.pexels.com/photos/8728557/pexels-photo-8728557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', this)"
+            >
+              G
+              <p class="description">Protecting data and networks.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="grid-item"
+              onclick="changeBackground('https://images.pexels.com/photos/5213144/pexels-photo-5213144.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', this)"
+            >
+              H
+              <p class="description">
+                Computing power via cloud infrastructure.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Product Showcase Section -->
-    <section id="products" class="products bg-light">
-      <div class="container text-center">
-        <h3 class="fw-bold">Discover Our Electronics Products</h3>
-        <div class="row gy-4">
-          <!-- Product 1 -->
-          <div class="col-md-4 col-sm-6">
-            <div class="product-item shadow-sm rounded p-3 h-100 bg-white">
-              <img
-                src="images/product1.webp"
-                class="img-fluid rounded mb-3"
-                alt="Refurbished Laptops"
-                style="height: 250px; object-fit: cover"
-              />
-              <h5 class="fw-bold">Refurbished Laptops</h5>
-              <p class="text-muted">
-                Affordable and high-performance laptops for businesses and
-                individuals.
-              </p>
-            </div>
+    <!-- Quick Overview -->
+    <section class="overview container-flude" data-aos="fade-up">
+      <h3 class="mb-5 fw-bold text-center">Testing</h3>
+      <div class="row justify-content-between p-4">
+        <div class="col-md-3 text-center">
+          <div class="icon mb-4">
+            <i class="bi bi-plug display-4 text-primary"></i>
           </div>
-          <!-- Product 2 -->
-          <div class="col-md-4 col-sm-6">
-            <div class="product-item shadow-sm rounded p-3 h-100 bg-white">
-              <img
-                src="images/product2.jpeg"
-                class="img-fluid rounded mb-3"
-                alt="Used Smartphones"
-                style="height: 250px; object-fit: cover"
-              />
-              <h5 class="fw-bold">Used Smartphones</h5>
-              <p class="text-muted">
-                Quality smartphones at great prices, perfect for everyday use.
-              </p>
-            </div>
-          </div>
-          <!-- Product 3 -->
-          <div class="col-md-4 col-sm-6">
-            <div class="product-item shadow-sm rounded p-3 h-100 bg-white">
-              <img
-                src="images/product3.jpeg"
-                class="img-fluid rounded mb-3"
-                alt="Desktop Computers"
-                style="height: 250px; object-fit: cover"
-              />
-              <h5 class="fw-bold">Desktop Computers</h5>
-              <p class="text-muted">
-                Reliable desktop computers for work and study, fully tested and
-                refurbished.
-              </p>
-            </div>
-          </div>
-          <!-- Product 4 -->
-          <div class="col-md-4 col-sm-6">
-            <div class="product-item shadow-sm rounded p-3 h-100 bg-white">
-              <img
-                src="images/product4.webp"
-                class="img-fluid rounded mb-3"
-                alt="Smart TVs"
-                style="height: 250px; object-fit: cover"
-              />
-              <h5 class="fw-bold">Smart TVs</h5>
-              <p class="text-muted">
-                Fully functional smart TVs with vibrant displays and top
-                features.
-              </p>
-            </div>
-          </div>
-          <!-- Product 5 -->
-          <div class="col-md-4 col-sm-6">
-            <div class="product-item shadow-sm rounded p-3 h-100 bg-white">
-              <img
-                src="images/product5.webp"
-                class="img-fluid rounded mb-3"
-                alt="Gaming Consoles"
-                style="height: 250px; object-fit: cover"
-              />
-              <h5 class="fw-bold">Gaming Consoles</h5>
-              <p class="text-muted">
-                Refurbished gaming consoles for endless entertainment at home.
-              </p>
-            </div>
-          </div>
-          <!-- Product 6 -->
-          <div class="col-md-4 col-sm-6">
-            <div class="product-item shadow-sm rounded p-3 h-100 bg-white">
-              <img
-                src="images/product6.webp"
-                class="img-fluid rounded mb-3"
-                alt="Computer Accessories"
-                style="height: 250px; object-fit: cover"
-              />
-              <h5 class="fw-bold">Computer Accessories</h5>
-              <p class="text-muted">
-                Essential accessories like keyboards, mice, and monitors at
-                great prices.
-              </p>
-            </div>
-          </div>
+          <h5 class="fw-bold text-dark">Quality You Can Count On:</h5>
+          <p class="small text-muted">
+            Every item is thoroughly tested and restored to ensure dependable
+            performance and an extended lifespan.
+          </p>
         </div>
-        <!-- "More Explore" Button -->
-        <div class="mt-5">
-          <a href="#explore-more" class="btn btn-primary btn-lg">
-            Explore More Products
-          </a>
+        <div class="col-md-3 text-center">
+          <div class="icon mb-4">
+            <i class="bi bi-basket display-4 text-warning"></i>
+          </div>
+          <h5 class="fw-bold text-dark">Export Logistics</h5>
+          <p class="small text-muted">
+            From Australia to East Africa, our efficient large-scale shipping
+            process ensures smooth, secure, and timely delivery, so your
+            products reach their destination without a hitch.
+          </p>
+        </div>
+        <div class="col-md-3 text-center">
+          <div class="icon mb-4">
+            <i class="bi bi-truck display-4 text-danger"></i>
+          </div>
+          <h5 class="fw-bold text-dark">Building Loyalty</h5>
+          <p class="small text-muted">
+            Stronger Connections, Long-Lasting Relationships! By delivering
+            exceptional service and reliable products, we create connections
+            that turn customers into fans and sellers into partners for the long
+            haul.
+          </p>
+        </div>
+        <div class="col-md-3 text-center">
+          <div class="icon mb-4">
+            <i class="bi bi-bar-chart display-4 text-info"></i>
+          </div>
+          <h5 class="fw-bold text-dark">Selling to Us</h5>
+          <p class="small text-muted">
+            Turn Your Electronics into Opportunity: We buy used electronics in
+            volume from Australian suppliers, making the process quick, simple,
+            and profitable for you.
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-white text-center py-3">
+    <footer class="text-white text-center">
       <p>© 2024 TLAS ELECTRIC PTY LTD. All Rights Reserved.</p>
       <div>
         <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
@@ -418,6 +371,20 @@
         <a href="#" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
       </div>
     </footer>
+
+    <script>
+      function changeBackground(imageUrl, element) {
+        document
+          .querySelectorAll(".grid-item")
+          .forEach((item) => item.classList.remove("active"));
+
+        element.classList.add("active");
+
+        document.getElementById(
+          "section"
+        ).style.background = `url('${imageUrl}') no-repeat center center/cover`;
+      }
+    </script>
 
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,23 +1,18 @@
 /* Color Palette */
 :root {
-  --primary-blue: #004AAD; /* Blue */
-  --secondary-green: #2ECC71; /* Green */
-  --white: #FFFFFF; 
+  --primary-blue: #004aad; /* Blue */
+  --secondary-green: #2ecc71; /* Green */
+  --white: #ffffff;
   --light-gray: #f7f7f7; /* Light Gray */
 }
 
+/* General Body Styles */
 body {
-  font-family: 'Roboto', sans-serif; /* Body Text Font */
+  font-family: "Roboto", sans-serif; /* Body Text Font */
   color: var(--primary-blue); /* Default Text Color */
-  background-color:#f4f8fb; /* Default Background Color */
+  background-color: #f4f8fb; /* Default Background Color */
   margin: 0;
   padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif; /* Titles Font */
-  color: var(--primary-blue); /* Default Title Color */
-  margin: 0;
 }
 
 /* Header Styles */
@@ -25,17 +20,16 @@ header {
   background-color: var(--primary-blue);
   color: var(--white);
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
 
 header h1 {
   font-size: 1.8rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 header .nav-link {
   font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
   color: var(--white);
   text-decoration: none;
 }
@@ -55,7 +49,6 @@ header .nav-link:hover {
 }
 
 .navbar-nav .nav-link {
-  font-family: 'Roboto', sans-serif;
   color: var(--white);
 }
 
@@ -63,29 +56,27 @@ header .nav-link:hover {
   color: var(--secondary-green);
 }
 
-/* Hero Section */
+/* Hero Section Styles */
 .hero {
   background-color: var(--light-gray); /* Light background for contrast */
   color: var(--primary-blue);
   padding: 5rem 0;
   text-align: center;
-  /* height: 70vh; */
+  position: relative;
 }
 
 .hero h2 {
   font-size: 2.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
 .hero p {
   font-size: 1.2rem;
-  font-family: 'Roboto', sans-serif;
-  color: var(--primary-blue);
+  font-family: "Roboto", sans-serif;
   margin-top: 1rem;
 }
 
-/* Shared button styles */
 .hero a.btn {
   font-size: 1rem;
   padding: 0.8rem 2rem;
@@ -97,61 +88,52 @@ header .nav-link:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Primary button styles */
+/* Button Styles */
 .hero a.btn-primary {
   background-color: var(--secondary-green);
-  color: white;
+  color: var(--white);
   border: none;
 }
 
 .hero a.btn-primary:hover {
-  background-color:  var(--secondary-green);
-  box-shadow: 0 8px 25px  var(--secondary-green);
+  background-color: var(--secondary-green);
+  box-shadow: 0 8px 25px var(--secondary-green);
   transform: translateY(-3px);
 }
 
-/* Outline button styles */
 .hero a.btn-outline-light {
   background-color: transparent;
-  color: white;
-  border: 2px solid white;
+  color: var(--white);
+  border: 2px solid var(--white);
 }
 
 .hero a.btn-outline-light:hover {
-  background-color: white;
+  background-color: var(--white);
   color: #000;
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.6);
 }
 
-/* Icon inside button */
 .hero a.btn-outline-light i {
   margin-right: 0.5rem;
   font-size: 1.2rem;
 }
 
-/* Animation for focus */
-.hero a.btn:focus {
-  outline: none;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 102, 0, 0.5);
-}
-
-
-/* Overview Section */
+/* Overview Section Styles */
 .overview {
-  background-color: var(--white);
+  /* background-color: var(--white); */
   color: var(--primary-blue);
 }
 
 .overview h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin-top: 50px;
 }
 
 .overview p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
   color: var(--primary-blue);
   margin-top: 0.5rem;
@@ -167,12 +149,83 @@ header .nav-link:hover {
   transform: scale(1.1); /* Slightly enlarge icon on hover */
 }
 
+/* change_background */
+.section {
+  background: url("https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+  /* height: 100vh; */
+  transition: background 0.5s ease-in-out;
+}
 
-/* Footer */
+.row {
+  margin: 0;
+  gap: 0; /* Remove the gap between grid items */
+}
+
+.col-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.grid-item {
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+  text-align: center;
+  border: 0.1px solid #ffffff;
+  margin: 0; /* Ensure no margin on individual grid items */
+}
+
+.grid-item:hover {
+  background: rgba(46, 204, 113, 0.6);
+}
+
+.grid-item.active {
+  background: rgba(0, 74, 173, 0.9);
+}
+
+.description {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.grid-item.active .description {
+  display: block;
+}
+
+/* Responsive Grid */
+@media (max-width: 576px) {
+  .grid-item {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    height: 270px;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-item {
+    height: 330px;
+  }
+}
+
+/* Footer Styles */
 footer {
   background-color: var(--primary-blue);
   color: var(--white);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 1rem 0;
   text-align: center;
   margin-top: 5rem;
@@ -182,7 +235,7 @@ footer p {
   margin: 0;
 }
 
-/* Preloader */
+/* Preloader Styles */
 #preloader {
   position: fixed;
   top: 0;
@@ -206,16 +259,34 @@ footer p {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-/* Add some spacing between sections */
-section {
-  margin-bottom: 5rem;
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--secondary-green);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none; /* Initially hidden */
 }
 
-/* Responsive Design Adjustments */
+#backToTop:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 2rem; /* Adjust font size for smaller screens */
@@ -232,22 +303,4 @@ section {
   .icon i {
     font-size: 2.5rem; /* Smaller icons on mobile */
   }
-}
-
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--secondary-green);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  display: none; /* Initially hidden */
-}
-
-#backToTop:hover {
-  background-color: #0056b3;
 }
