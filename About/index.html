@@ -84,7 +84,6 @@
 
     <!-- Banner Section -->
     <section class="hero text-center">
-      <!-- Gradient overlay -->
       <div
         style="
           position: absolute;
@@ -97,8 +96,108 @@
         "
       ></div>
 
-      <!-- Brand logos in the background -->
       <div class="container" style="position: relative; z-index: 2"></div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 text-dark">Our Mission</h2>
+        <p class="text-center text-dark p-4">
+          At <strong>TLAS Electric Pty Ltd</strong>, we bridge the gap between
+          <strong>Australia</strong> and <strong>East Africa</strong> by
+          sourcing, restoring, and delivering reliable used electronics in bulk.
+          Our mission is clear: to extend the lifespan of valuable electronics,
+          minimize environmental impact, and cater to the increasing demand for
+          affordable technology in East Africa's rapidly growing markets.
+        </p>
+        <br />
+        <p class="text-center text-dark">
+          We believe in building <strong>trust</strong> and forging
+          <strong>lasting partnerships</strong>. By collaborating closely with
+          both suppliers and customers, we strive to exceed expectations. Our
+          streamlined logistics ensure that international trade is seamless,
+          efficient, and tailored to meet the needs of our partners.
+        </p>
+        <br /><br />
+        <p class="text-center text-dark">
+          At TLAS, we’re more than just a company connecting continents—we’re
+          <strong>breaking barriers</strong> and shaping a
+          <strong>brighter future</strong> for all. We believe that
+          <strong>teamwork makes the dream work</strong>, and together, we’re
+          creating lasting impacts and driving progress for communities in both
+          Australia and East Africa.
+        </p>
+      </div>
+    </section>
+
+    <!-- Random Lines Section -->
+    <section class="random-lines py-5 bg-gradient">
+      <div class="container">
+        <h2 class="text-center mb-4 text-dark">Our Philosophy</h2>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div
+              class="card p-4 h-100 shadow-lg rounded border-0 hover-effect"
+              data-aos="fade-up"
+            >
+              <p class="card-text text-center text-dark font-weight-bold">
+                "Tested to last, built to trust—brightening lives is a must!"
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div
+              class="card p-4 h-100 shadow-lg rounded border-0 hover-effect"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <p class="card-text text-center text-dark font-weight-bold">
+                "Trust is the cornerstone of our business. We prioritize quality
+                over quantity."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div
+              class="card p-4 h-100 shadow-lg rounded border-0 hover-effect"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <p class="card-text text-center text-dark font-weight-bold">
+                "Our professionalism, your peace of mind—delivering top-tier
+                electronics, unmatched performance, and building lasting
+                connections with every click."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div
+              class="card p-4 h-100 shadow-lg rounded border-0 hover-effect"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <p class="card-text text-center text-dark font-weight-bold">
+                "Need electronics you can rely on? With strong connections to
+                trusted sources across Australia, we bring you top-quality
+                appliances, ready for seamless shipping to East Africa!"
+              </p>
+            </div>
+          </div>
+          <div class="col-md-12 mb-3">
+            <div
+              class="card p-4 h-100 shadow-lg rounded border-0 hover-effect"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <p class="card-text text-center text-dark font-weight-bold">
+                "Accelerate success, growth, and innovation through TLAS’s
+                powerful network of quality electronics."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Scroll Section -->
@@ -135,20 +234,6 @@
         <div class="value-box">
           <div class="content">
             <div class="text">
-              <h2>Sustainability</h2>
-              <p>Reducing waste by giving electronics a second life.</p>
-            </div>
-            <div class="image">
-              <img
-                src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Sustainability"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="value-box">
-          <div class="content">
-            <div class="text">
               <h2>Excellence</h2>
               <p>Delivering products that meet the highest standards.</p>
             </div>
@@ -156,20 +241,6 @@
               <img
                 src="https://images.pexels.com/photos/7005506/pexels-photo-7005506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Excellence"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="value-box">
-          <div class="content">
-            <div class="text">
-              <h2>Sustainability</h2>
-              <p>Reducing waste by giving electronics a second life.</p>
-            </div>
-            <div class="image">
-              <img
-                src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Sustainability"
               />
             </div>
           </div>
@@ -184,27 +255,5 @@
 
     <script src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      const valuesSection = document.querySelector(".values-section");
-
-      // Prevent section-specific scroll blocking the rest of the page
-      valuesSection.addEventListener("wheel", (event) => {
-        const delta = event.deltaY;
-        const atTop = valuesSection.scrollTop === 0;
-        const atBottom =
-          valuesSection.scrollHeight - valuesSection.scrollTop ===
-          valuesSection.clientHeight;
-
-        if ((atTop && delta < 0) || (atBottom && delta > 0)) {
-          return; // Allow scrolling to propagate to the body
-        }
-
-        event.preventDefault();
-        valuesSection.scrollBy({
-          top: delta,
-          behavior: "smooth",
-        });
-      });
-    </script>
   </body>
 </html>

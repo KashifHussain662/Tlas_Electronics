@@ -144,6 +144,55 @@ header .nav-link:hover {
   object-fit: contain;
 }
 
+/* Random Lines Section Styles */
+.random-lines {
+  background: linear-gradient(135deg, #5b2c6f, #8e44ad);
+  padding: 50px 0;
+}
+
+.random-lines h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.random-lines .card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.random-lines .card-text {
+  font-size: 1.2rem;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+.random-lines .hover-effect:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.random-lines .card-text:hover {
+  text-decoration: underline;
+}
+
+/* AOS Animation */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .why-choose {
   background-color: #f8f9fa;
   padding: 50px 0;
