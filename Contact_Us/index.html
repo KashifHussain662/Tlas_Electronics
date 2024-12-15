@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - TLAS ELECTRIC PTY LTD</title>
     <link
+      rel="shortcut icon"
+      href="../images/logo/Asset 1.png"
+      type="image/x-icon"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
@@ -13,15 +18,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <!-- AOS -->
     <link
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
     <!-- Toastr -->
     <link
       rel="stylesheet"
@@ -29,17 +32,20 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   </head>
-  <body>
-    <!-- Preloader -->
-    <div id="preloader">
-      <div class="spinner"></div>
-    </div>
 
+  <body>
     <!-- Header -->
-    <header class="p-3">
+    <header class="p-4">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand text-white" href="#">TLAS ELECTRIC PTY LTD</a>
+          <a class="navbar-brand" href="#">
+            <img
+              src="../images/logo/Asset 1.png"
+              alt="TLAS ELECTRIC PTY LTD"
+              style="max-height: 50px"
+            />
+            <span class="text-white m-4">TLAS ELECTRIC PTY LTD</span>
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -66,7 +72,7 @@
                 <a href="../Products/index.html" class="nav-link">Products</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Contact Us</a>
+                <a href="#" class="nav-link active">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -74,75 +80,95 @@
       </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero text-center">
+      <div class="overlay"></div>
+      <div class="container" style="position: relative; z-index: 2">
+        <div class="banner">
+          <h1 class="display-4 text-white fw-bold">Contact Us</h1>
+          <p class="lead text-white">We would love to hear from you!</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
-    <section class="contact py-5 bg-light">
+    <section class="contact-section py-5">
       <div class="container">
-        <h2 class="text-center mb-4" data-aos="fade-up">Get in Touch</h2>
-        <form
-          action="../server/save_contact.php"
-          method="POST"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="name" class="form-label">Name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                name="name"
-                required
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="email"
-                required
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="phone" class="form-label">Phone</label>
-              <input
-                type="tel"
-                class="form-control"
-                id="phone"
-                name="phone"
-                required
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="message" class="form-label">Message</label>
-              <textarea
-                class="form-control"
-                id="message"
-                name="message"
-                rows="3"
-                required
-              ></textarea>
-            </div>
+        <div class="row">
+          <!-- Left Side: Image -->
+          <div class="col-lg-6">
+            <img
+              src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Contact Image"
+              class="img-fluid rounded shadow"
+              style="height: 100%; object-fit: cover; border-radius: 15px"
+            />
           </div>
-          <div class="text-center mt-4">
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+          <!-- Right Side: Contact Form and Information -->
+          <div class="col-lg-6">
+            <h2 class="h3 mb-4">Get in Touch</h2>
+            <form action="../server/send_email.php" method="post">
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Write your message here"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary px-4 py-2">
+                Send Message
+              </button>
+            </form>
+
+            <h2 class="h4 mt-5">Contact Information</h2>
+            <ul class="list-unstyled">
+              <li><strong>Phone:</strong> +123 456 789</li>
+              <li><strong>Email:</strong> contact@tlaselectric.com</li>
+              <li>
+                <strong>Address:</strong> 123 Electric Street, City, Country
+              </li>
+            </ul>
           </div>
-        </form>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-      <p>© 2024 TLAS ELECTRIC PTY LTD. All Rights Reserved.</p>
+      <p class="mb-0">© 2024 TLAS ELECTRIC PTY LTD. All Rights Reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init();
-    </script> -->
+    </script>
     <script src="../js/script.js"></script>
   </body>
 </html>

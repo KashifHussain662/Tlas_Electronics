@@ -1,21 +1,30 @@
-/* Color Palette */
+/* ===============================
+   Color Palette
+   =============================== */
 :root {
   --primary-blue: #004aad; /* Blue */
   --secondary-green: #2ecc71; /* Green */
   --white: #ffffff;
   --light-gray: #f7f7f7; /* Light Gray */
+  --font-roboto: "Roboto", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-montserrat-bold: "Montserrat", sans-serif;
 }
 
-/* General Body Styles */
+/* ===============================
+     General Body Styles
+     =============================== */
 body {
-  font-family: "Roboto", sans-serif; /* Body Text Font */
+  font-family: var(--font-roboto); /* Use Roboto font */
   color: var(--primary-blue); /* Default Text Color */
   background-color: #f4f8fb; /* Default Background Color */
   margin: 0;
   padding: 0;
 }
 
-/* Header Styles */
+/* ===============================
+     Header Styles
+     =============================== */
 header {
   background-color: var(--primary-blue);
   color: var(--white);
@@ -25,7 +34,8 @@ header {
 
 header h1 {
   font-size: 1.8rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-montserrat); /* Use Montserrat */
+  font-weight: bold; /* Use bold version of Montserrat */
 }
 
 header .nav-link {
@@ -39,7 +49,9 @@ header .nav-link:hover {
   transition: color 0.3s ease;
 }
 
-/* Navbar Styles */
+/* ===============================
+     Navbar Styles
+     =============================== */
 .navbar-toggler {
   border: none;
 }
@@ -56,7 +68,27 @@ header .nav-link:hover {
   color: var(--secondary-green);
 }
 
-/* Hero Section Styles */
+/* Active Link Styles */
+.navbar-nav .nav-link.active {
+  color: var(--white); /* White text color */
+  background-color: rgba(50, 67, 50, 0.745);
+  padding: 8px 20px; /* Padding for better click area */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-weight: bold; /* Bold text for better emphasis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.navbar-nav .nav-link.active:hover {
+  background-color: #128c4f; /* Darker shade of green on hover */
+  color: var(--white);
+  text-decoration: none; /* Remove underline */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* ===============================
+     Hero Section Styles
+     =============================== */
 .hero {
   background-color: var(--light-gray); /* Light background for contrast */
   color: var(--primary-blue);
@@ -119,20 +151,21 @@ header .nav-link:hover {
   font-size: 1.2rem;
 }
 
-/* Overview Section Styles */
+/* ===============================
+     Overview Section Styles
+     =============================== */
 .overview {
-  /* background-color: var(--white); */
-  color: var(--primary-blue);
+  padding: 16px;
 }
 
-.overview h3 {
+h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin-top: 50px;
 }
 
-.overview p {
+p {
   font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
   color: var(--primary-blue);
@@ -140,8 +173,7 @@ header .nav-link:hover {
 }
 
 .icon i {
-  font-size: 3rem; /* Larger icons */
-  color: var(--secondary-green);
+  font-size: 10rem; /* Larger icons */
   transition: transform 0.3s ease; /* Add hover effect for icons */
 }
 
@@ -149,11 +181,70 @@ header .nav-link:hover {
   transform: scale(1.1); /* Slightly enlarge icon on hover */
 }
 
-/* change_background */
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+/* ===============================
+     Custom Section Styles
+     =============================== */
+.quality,
+.logistics,
+.loyalty,
+.selling {
+  padding: 5rem 0;
+  border-bottom: 1px solid rgb(211, 211, 211);
+  /* Adding box shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Optional: Adds rounded corners to the shadow effect */
+  margin-top: 16px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-md-6 {
+  flex: 1;
+  padding: 15px;
+}
+
+.icon {
+  margin-bottom: 1.5rem;
+}
+
+.quality .icon i {
+  color: var(--primary-blue);
+}
+
+.logistics .icon i {
+  color: var(--warning);
+}
+
+.loyalty .icon i {
+  color: var(--danger);
+}
+
+.selling .icon i {
+  color: var(--info);
+}
+
+/* ===============================
+     Change Background Section Styles
+     =============================== */
 .section {
   background: url("https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
-  /* height: 100vh; */
   transition: background 0.5s ease-in-out;
 }
 
@@ -202,7 +293,9 @@ header .nav-link:hover {
   display: block;
 }
 
-/* Responsive Grid */
+/* ===============================
+     Responsive Design
+     =============================== */
 @media (max-width: 576px) {
   .grid-item {
     height: 250px;
@@ -221,7 +314,9 @@ header .nav-link:hover {
   }
 }
 
-/* Footer Styles */
+/* ===============================
+     Footer Styles
+     =============================== */
 footer {
   background-color: var(--primary-blue);
   color: var(--white);
@@ -235,7 +330,9 @@ footer p {
   margin: 0;
 }
 
-/* Preloader Styles */
+/* ===============================
+     Preloader Styles
+     =============================== */
 #preloader {
   position: fixed;
   top: 0;
@@ -267,7 +364,9 @@ footer p {
   }
 }
 
-/* Back to Top Button */
+/* ===============================
+     Back to Top Button
+     =============================== */
 #backToTop {
   position: fixed;
   bottom: 20px;
@@ -286,7 +385,9 @@ footer p {
   background-color: #0056b3;
 }
 
-/* Responsive Design */
+/* ===============================
+     Responsive Design for Smaller Screens
+     =============================== */
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 2rem; /* Adjust font size for smaller screens */
