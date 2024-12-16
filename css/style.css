@@ -95,6 +95,7 @@ header .nav-link:hover {
   padding: 5rem 0;
   text-align: center;
   position: relative;
+  height: 85vh;
 }
 
 .hero h2 {
@@ -156,6 +157,7 @@ header .nav-link:hover {
      =============================== */
 .overview {
   padding: 16px;
+  border-bottom: 1px solid black;
 }
 
 h3 {
@@ -173,7 +175,7 @@ p {
 }
 
 .icon i {
-  font-size: 10rem; /* Larger icons */
+  font-size: 5rem; /* Larger icons */
   transition: transform 0.3s ease; /* Add hover effect for icons */
 }
 
@@ -238,6 +240,36 @@ p {
 .selling .icon i {
   color: var(--info);
 }
+/* New Overview Section */
+.new-overview {
+  background-color: var(--white);
+  color: var(--primary-blue);
+  padding: 5rem;
+}
+
+.new-overview h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  /* margin-top: 50px; */
+}
+
+.new-overview p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary-blue);
+  margin-top: 0.5rem;
+}
+
+.new-icon i {
+  font-size: 3rem; /* Larger icons */
+  color: var(--secondary-green);
+  transition: transform 0.3s ease; /* Add hover effect for icons */
+}
+
+.new-icon i:hover {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
 
 /* ===============================
      Change Background Section Styles
@@ -246,6 +278,7 @@ p {
   background: url("https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
   transition: background 0.5s ease-in-out;
+  
 }
 
 .row {
@@ -292,6 +325,45 @@ p {
 .grid-item.active .description {
   display: block;
 }
+
+
+/* Selling to Us Section */
+.selling-to-us {
+  /* background-color: var(--white); */
+  color: var(--primary-blue);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid  rgb(194, 194, 194);;
+}
+
+.selling-to-us h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.selling-to-us p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary-blue);
+  margin-top: 0.5rem;
+}
+
+.selling-to-us .icon i {
+  font-size: 3rem; /* Larger icons */
+  color: var(--secondary-green);
+  transition: transform 0.3s ease; /* Add hover effect for icons */
+}
+
+.selling-to-us .icon i:hover {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+.selling-to-us .col-md-6 {
+  margin-bottom: 30px;
+}
+
 
 /* ===============================
      Responsive Design
