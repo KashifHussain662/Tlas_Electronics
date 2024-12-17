@@ -22,25 +22,23 @@ body {
 header {
   background-color: var(--primary-blue);
   color: var(--white);
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
 
 header h1 {
-  font-size: 2rem;
-  font-family: var(--font-montserrat);
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-family: var(--font-montserrat); /* Use Montserrat */
+  font-weight: bold; /* Use bold version of Montserrat */
 }
 
-header .nav-link {
-  font-size: 1rem;
-  color: var(--white);
-  text-decoration: none;
+header .navbar-brand img {
+  max-height: 50px;
+  transition: transform 0.3s ease-in-out;
 }
 
-header .nav-link:hover {
-  color: var(--secondary-green);
-  transition: color 0.3s ease;
+header .navbar-brand:hover img {
+  transform: scale(1.1);
 }
 
 /* Navbar Styles */
@@ -54,31 +52,27 @@ header .nav-link:hover {
 
 .navbar-nav .nav-link {
   color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
   color: var(--secondary-green);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 
-/* Active Link Styles */
 .navbar-nav .nav-link.active {
-  color: var(--white); /* White text color */
-  background-color: rgba(50, 67, 50, 0.745);
-  padding: 8px 20px; /* Padding for better click area */
-  border-radius: 4px; /* Slightly rounded corners */
-  font-weight: bold; /* Bold text for better emphasis */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Soft shadow */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-/* Hover effect for active link */
-.navbar-nav .nav-link.active:hover {
-  background-color: #128c4f; /* Darker green on hover */
   color: var(--white);
-  text-decoration: none;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  background-color: var(--secondary-green);
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 /* Hero Section Styles */
 .hero {
   height: 100vh;
@@ -161,10 +155,121 @@ header .nav-link:hover {
   }
 }
 
-/* Footer Styles */
 footer {
-  background-color: #343a40;
-  color: var(--white);
+  background-color: var(--primary-blue);
+  color: #fff;
+  padding: 40px 0;
+}
+
+footer h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+footer p,
+footer ul {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul.social-media li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+footer ul.social-media a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+footer ul.social-media a:hover {
+  text-decoration: underline;
+}
+
+footer .container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col-lg-3 {
+  flex: 1;
+  padding: 0 15px;
+}
+
+footer .text-center {
+  margin-top: 30px;
+}
+
+footer .row .col-12 {
+  margin-top: 20px;
+  padding: 0;
+}
+
+footer .row .col-12 p {
+  font-size: 14px;
+}
+
+/* Icon Styles */
+footer i {
+  margin-right: 10px;
+}
+
+/* Footer Copyright Styling */
+footer .row .col-12 p {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 30px;
   text-align: center;
-  padding: 20px 0;
+}
+
+footer .row .col-12 p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .row .col-12 p a:hover {
+  text-decoration: underline;
+}
+
+/* Bootstrap Adjustments for Responsiveness */
+@media (max-width: 991px) {
+  footer .col-lg-3 {
+    flex: 1 0 100%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  footer h5 {
+    font-size: 16px;
+  }
+
+  footer p,
+  footer ul {
+    font-size: 12px;
+  }
+
+  footer ul.social-media li {
+    margin-right: 10px;
+  }
+
+  footer ul.social-media a {
+    font-size: 18px;
+  }
 }
