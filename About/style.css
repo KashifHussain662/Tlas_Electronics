@@ -4,6 +4,7 @@
   --secondary-green: #2ecc71; /* Green */
   --white: #ffffff;
   --light-gray: #f7f7f7; /* Light Gray */
+  --dark-gray: #343a40; /* Dark Gray for Footer */
   --font-roboto: "Roboto", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
   --font-montserrat-bold: "Montserrat", sans-serif;
@@ -32,15 +33,13 @@ header h1 {
   font-weight: bold; /* Use bold version of Montserrat */
 }
 
-header .nav-link {
-  font-size: 1rem;
-  color: var(--white);
-  text-decoration: none;
+header .navbar-brand img {
+  max-height: 50px;
+  transition: transform 0.3s ease-in-out;
 }
 
-header .nav-link:hover {
-  color: var(--secondary-green);
-  transition: color 0.3s ease;
+header .navbar-brand:hover img {
+  transform: scale(1.1);
 }
 
 /* Navbar Styles */
@@ -54,36 +53,33 @@ header .nav-link:hover {
 
 .navbar-nav .nav-link {
   color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
   color: var(--secondary-green);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 
-/* Active Link Styles */
 .navbar-nav .nav-link.active {
-  color: var(--white); /* White text color */
-  background-color: rgba(50, 67, 50, 0.745);
-  padding: 8px 20px; /* Padding for better click area */
-  border-radius: 4px; /* Slightly rounded corners */
-  font-weight: bold; /* Bold text for better emphasis */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Soft shadow */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-/* Hover effect for active link to make it more interactive */
-.navbar-nav .nav-link.active:hover {
-  background-color: #128c4f; /* Darker shade of green on hover */
   color: var(--white);
-  text-decoration: none; /* Remove underline */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  background-color: var(--secondary-green);
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Hero Section Styles */
 .hero {
   height: 100vh;
-  background: url("../images/About-us_banner.webp")
-    no-repeat center center/cover;
+  background: url("../images/About-us_banner.webp") no-repeat center
+    center/cover;
   color: white;
   display: flex;
   align-items: center;
@@ -94,18 +90,102 @@ header .nav-link:hover {
   position: relative;
 }
 
-.banner h1 {
+.hero h1 {
   font-size: 3rem;
-  font-family: var(--font-montserrat); /* Use Montserrat */
-  font-weight: bold; /* Bold version */
+  font-family: var(--font-montserrat);
+  font-weight: 700;
 }
 
-.banner p {
+.hero p {
   font-size: 1.2rem;
   margin-top: 10px;
+  font-weight: 500;
 }
 
-/* Random Lines Section Styles */
+/* Mission Section Styles */
+.mission {
+  background-color: var(--white);
+  padding: 60px 0;
+}
+
+.mission h2 {
+  font-family: var(--font-montserrat);
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.mission .row {
+  margin-bottom: 30px;
+}
+
+.mission img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mission p {
+  font-size: 1rem;
+  color: var(--primary-blue);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.mission .col-md-6 {
+  padding: 15px;
+}
+
+.mission .row img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Core Values Section */
+.container.py-5 {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.core-values h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.core-values .card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.core-values .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.core-values .card i {
+  color: var(--secondary-green);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.core-values .card h5 {
+  font-family: var(--font-montserrat);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.core-values .card p {
+  font-size: 1rem;
+  color: var(--primary-blue);
+}
+
+/* Random Lines Section */
 .random-lines {
   background: linear-gradient(135deg, #5b2c6f, #8e44ad);
   padding: 50px 0;
@@ -142,13 +222,16 @@ header .nav-link:hover {
   text-decoration: underline;
 }
 
-i {
-  color: var(--primary-blue);
-}
-
+/* Footer Styles */
 footer {
-  background-color: #343a40;
-  color: white;
+  background-color: var(--dark-gray);
+  color: var(--white);
   text-align: center;
   padding: 20px 0;
+  font-size: 1rem;
+}
+
+footer p {
+  font-weight: 500;
+  letter-spacing: 1px;
 }
