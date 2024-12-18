@@ -1,35 +1,35 @@
-/* Color Palette */
+/* --------------------------- Color Palette --------------------------- */
 :root {
-  --primary-blue: #004aad; /* Blue */
-  --secondary-green: #2ecc71; /* Green */
+  --primary-blue: #004aad;
+  --secondary-green: #2ecc71;
   --white: #ffffff;
-  --light-gray: #f7f7f7; /* Light Gray */
+  --light-gray: #f7f7f7;
   --font-roboto: "Roboto", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
   --font-montserrat-bold: "Montserrat", sans-serif;
 }
 
-/* General Body Styles */
+/* --------------------------- General Body Styles --------------------------- */
 body {
-  font-family: var(--font-roboto); /* Use Roboto font */
-  color: var(--primary-blue); /* Default Text Color */
-  background-color: #f4f8fb; /* Default Background Color */
+  font-family: var(--font-roboto);
+  color: var(--primary-blue);
+  background-color: #f4f8fb;
   margin: 0;
   padding: 0;
 }
 
-/* Header Styles */
+/* --------------------------- Header Styles --------------------------- */
 header {
   background-color: var(--primary-blue);
   color: var(--white);
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
   font-size: 1.8rem;
-  font-family: var(--font-montserrat); /* Use Montserrat */
-  font-weight: bold; /* Use bold version of Montserrat */
+  font-family: var(--font-montserrat);
+  font-weight: bold;
 }
 
 header .navbar-brand img {
@@ -41,7 +41,7 @@ header .navbar-brand:hover img {
   transform: scale(1.1);
 }
 
-/* Navbar Styles */
+/* --------------------------- Navbar Styles --------------------------- */
 .navbar-toggler {
   border: none;
 }
@@ -73,7 +73,8 @@ header .navbar-brand:hover img {
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-/* Hero Section Styles */
+
+/* --------------------------- Hero Section Styles --------------------------- */
 .hero {
   height: 100vh;
   background: url("../images/services.webp") no-repeat center center/cover;
@@ -87,52 +88,140 @@ header .navbar-brand:hover img {
   position: relative;
 }
 
-/* Services Section */
-.services-section {
-  padding: 4rem 0;
-  background-color: #f9f9f9;
+/* Mission Section Styles */
+.mission {
+  background-color: var(--white);
+  padding: 60px 0;
 }
 
-.services-section h2 {
+.mission h2 {
+  font-family: var(--font-montserrat);
   font-size: 2.5rem;
-  font-weight: 700;
-  /* margin-bottom: 2rem; */
+  color: var(--primary-blue);
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
 }
 
-/* Service Cards with Image on the Left */
-.service-row {
-  display: flex;
-  /* align-items: center; */
-  /* margin-bottom: 3rem; */
-  padding: 5rem;
-  border-bottom: 1px solid black;
+.mission .row {
+  margin-bottom: 30px;
 }
 
-.service-row:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.service-image {
-  flex: 1;
-  max-width: 100%;
-  height: 300px;
-  object-fit: cover;
+.mission img {
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.service-text {
-  flex: 1;
-  padding: 20px;
-  font-size: 1.1rem;
-  color: #555;
+.mission p {
+  font-size: 1rem;
+  color: var(--primary-blue);
+  font-weight: 400;
+  line-height: 1.6;
 }
 
-.service-text h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+.mission .col-md-6 {
+  padding: 15px;
 }
 
+.mission .row img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* --------------------------- Grid Item Styles --------------------------- */
+.grid-item {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 400px;
+  padding: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  /* text-align: center; */
+  border-radius: 10px;
+  border: 0.1px solid #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.594),
+    rgba(59, 6, 94, 0.609)
+  );
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.grid-item:hover::before {
+  background-color: #004aad;
+}
+
+.grid-item h3 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.description {
+  display: none;
+  margin-top: 24px;
+  font-size: 16px;
+  color: #e0e0e0;
+  position: relative;
+  bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-family: "Roboto", sans-serif;
+  z-index: 2;
+}
+
+.grid-item:hover .description {
+  display: block;
+  opacity: 1;
+}
+
+.grid-item:hover h3 {
+  opacity: 1;
+}
+
+@media (max-width: 576px) {
+  .grid-item {
+    height: 200px;
+  }
+
+  .grid-item h3 {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+}
+
+/* --------------------------- Footer Styles --------------------------- */
 footer {
   background-color: var(--primary-blue);
   color: #fff;
@@ -203,12 +292,10 @@ footer .row .col-12 p {
   font-size: 14px;
 }
 
-/* Icon Styles */
 footer i {
   margin-right: 10px;
 }
 
-/* Footer Copyright Styling */
 footer .row .col-12 p {
   font-size: 12px;
   color: #aaa;
@@ -225,7 +312,7 @@ footer .row .col-12 p a:hover {
   text-decoration: underline;
 }
 
-/* Bootstrap Adjustments for Responsiveness */
+/* --------------------------- Bootstrap Responsiveness Adjustments --------------------------- */
 @media (max-width: 991px) {
   footer .col-lg-3 {
     flex: 1 0 100%;
