@@ -37,9 +37,9 @@ header .navbar-brand img {
   transition: transform 0.3s ease-in-out;
 }
 
-header .navbar-brand:hover img {
+/* header .navbar-brand:hover img {
   transform: scale(1.1);
-}
+} */
 
 /* --------------------------- Navbar Styles --------------------------- */
 .navbar-toggler {
@@ -136,14 +136,11 @@ header .navbar-brand:hover img {
   font-weight: bold;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
   height: 400px;
   padding: 32px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
-  /* text-align: center; */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
   border-radius: 10px;
   border: 0.1px solid #ffffff;
   position: relative;
@@ -163,13 +160,19 @@ header .navbar-brand:hover img {
     rgba(0, 0, 0, 0.594),
     rgba(59, 6, 94, 0.609)
   );
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out, background-color 0.5s ease-in-out;
   z-index: 1;
 }
 
 .grid-item:hover::before {
+  opacity: 1;
   background-color: #004aad;
+}
+
+.grid-item:hover {
+  transform: scale(1.05); /* Slightly zoom in the element */
+  filter: brightness(1.2); /* Increase brightness for a glowing effect */
 }
 
 .grid-item h3 {
@@ -183,6 +186,9 @@ header .navbar-brand:hover img {
   color: white;
   position: relative;
   z-index: 2;
+  opacity: 0; /* Start with hidden title */
+  transform: translateY(20px); /* Start with slight downward position */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .description {
@@ -193,7 +199,7 @@ header .navbar-brand:hover img {
   position: relative;
   bottom: 10px;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   font-family: "Roboto", sans-serif;
   z-index: 2;
 }
@@ -201,10 +207,12 @@ header .navbar-brand:hover img {
 .grid-item:hover .description {
   display: block;
   opacity: 1;
+  transform: translateY(0); /* Slide the description up */
 }
 
 .grid-item:hover h3 {
   opacity: 1;
+  transform: translateY(0); /* Move title to normal position */
 }
 
 @media (max-width: 576px) {

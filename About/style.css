@@ -38,9 +38,9 @@ header .navbar-brand img {
   transition: transform 0.3s ease-in-out;
 }
 
-header .navbar-brand:hover img {
+/* header .navbar-brand:hover img {
   transform: scale(1.1);
-}
+} */
 
 /* Navbar Styles */
 .navbar-toggler {
